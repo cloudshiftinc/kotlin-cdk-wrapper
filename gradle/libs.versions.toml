@@ -7,7 +7,7 @@ kotlin = "2.0.21"
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version = "0.34.0" }
-ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.23.0" }
+ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.24.0" }
 
 [libraries]
 
@@ -44,13 +44,13 @@ caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.2.2
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.24" }
 
 guava = { module = "com.google.guava:guava", version = "33.4.8-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.208.0" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.214.0" }
 awscdk-constructs = { module = "software.constructs:constructs", version = "10.4.2" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.18.1" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.27.0" }
 
-jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.19.2" }
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.20.0" }
 jackson-core = { module = "com.fasterxml.jackson.core:jackson-core" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind" }
-jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.19.2" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.20.0" }
 
